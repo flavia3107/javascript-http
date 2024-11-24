@@ -13,9 +13,9 @@ body {
 
 button {
 	font: inherit;
-	border: 1px solid #000053;
+	border: 1px solid #05053a;
 	color: white;
-	background: #000053;
+	background: #05053a;
 	padding: 0.5rem 1.5rem;
 	border-radius: 5px;
 	cursor: pointer;
@@ -27,8 +27,8 @@ button:focus {
 
 button:hover,
 button:active {
-	background: #12128a;
-	border-color: #12128a;
+	background: #141470;
+	border-color: #141470;
 }
 
 label,
@@ -46,6 +46,7 @@ textarea {
 	border: 1px solid #ccc;
 	height: 3rem;
 	resize: none;
+	border-radius: 5px;
 }
 
 input:focus,
@@ -61,12 +62,15 @@ textarea {
 section {
 	width: 95%;
 	margin: 2rem auto;
-	background-color: #fff;
 	padding: 1.5rem;
 }
 
 .form-control {
 	margin: 0.5rem 0;
+}
+
+.form-control:has(textarea) {
+	width: 100%;
 }
 
 form,
@@ -113,19 +117,15 @@ form,
 }
 
 .post-item button {
-	border-color: #920101;
-	background: #920101;
+	border-color: #103c5c;
+	background: #103c5c;
 	margin-top: 1rem;
 }
 
 .post-item button:hover,
 .post-item button:active {
-	border-color: #dd2929;
-	background: #dd2929;
-}
-
-#available-posts {
-	background-color: transparent;
+	border-color: #174b70;
+	background: #174b70;
 }
 
 .posts {
@@ -133,4 +133,66 @@ form,
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(19rem, 1fr));
 	gap: 1rem;
+}
+
+::-webkit-scrollbar {
+	height: 9px;
+	width: 9px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #d3d3d3;
+	width: 9px;
+}
+
+::-webkit-scrollbar-track {
+	background: transparent;
+	width: 9px;
+}
+
+::-webkit-scrollbar-corner {
+	background: transparent;
+}
+
+.logo {
+	display: flex;
+	text-decoration: none;
+	padding: 1rem 0 0 1rem;
+	width: 10rem;
+}
+
+.logo > img {
+	height: 35px;
+}
+
+.logo-txt {
+	padding-left: 7px;
+	display: flex;
+	flex-direction: column;
+	color: #1b1a1a;
+	align-items: flex-start;
+}
+
+.logo-img {
+	width: 2rem;
+	margin-right: 3px;
+}
+
+.logo-txt h1,
+.logo-txt span {
+	margin: 0;
+	padding: 0;
+	line-height: 1;
+	letter-spacing: 4px;
+}
+
+.logo-txt h1 {
+	font-weight: bolder;
+	font-size: 1.1rem;
+	margin-top: 2px;
+}
+
+.logo-txt span {
+	font-weight: lighter;
+	font-size: 0.85rem;
 }
