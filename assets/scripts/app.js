@@ -1,7 +1,7 @@
 const listElement = document.querySelector('.posts');
 const postTemplate = document.getElementById('single-post');
 const form = document.querySelector('#new-post form');
-const fetchButton = document.querySelector('#available-posts button');
+const fetchButton = document.querySelector('#fetch-button');
 const postList = document.querySelector('ul');
 
 function sendHttpRequest(method, url, data) {
